@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRAPPO — Контакти</title>
+  <meta name="description" content="Зв'яжіться з командою CRAPPO для підтримки та запитань.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<body style="background-color: #0D0D2B;">
+
+<header class="navbar">
+  <img src="image/CRAPPO.webp" alt="Логотип CRAPPO" loading="lazy">
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="products.html">Продукти</a></li>
+      <li><a href="about.html">Про нас</a></li>
+      <li><a href="contact.html">Контакти</a></li>
+    </ul>
+  </nav>
+  <div class="auth">
+    <a href="#">Увійти</a>
+    <span>|</span>
+    <a href="#" class="register-btn openModal">Реєстрація</a>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Зв'яжіться з нами</h1>
+      <p>Маєте запитання? Ми завжди готові допомогти!</p>
+    </div>
+    <div class="hero-img">
+      <img src="image/contact-illustration.webp" alt="Контакти CRAPPO" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-form-section">
+    <div class="container">
+      <h2>Форма зв’язку</h2>
+      <form class="contact-form" action="#" method="post" novalidate>
+        <input type="text" name="name" placeholder="Ваше ім’я" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="6" placeholder="Ваше повідомлення" required></textarea>
+        <button type="submit" class="btn">Надіслати</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Info -->
+  <section class="contact-info">
+    <div class="container">
+      <h2>Контактна інформація</h2>
+      <p>Email: <a href="mailto:support@crappo.com">support@crappo.com</a></p>
+      <p>Телефон: <a href="tel:+380123456789">+380 123 456 789</a></p>
+      <p>Адреса: вул. Крипто, 123, Київ, Україна</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-container">
+      <div class="footer-text">
+        <h3>Почніть майнінг вже зараз</h3>
+        <p>Приєднуйтесь до CRAPPO, щоб отримувати новини та почати майнінг</p>
+      </div>
+      <div class="footer-subscribe">
+        <form class="subscribe-form" action="#" method="post" novalidate>
+          <input type="email" placeholder="Введіть email" required>
+          <button type="submit">Підписатися</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-container">
+      <div class="footer-logo"><img src="image/CRAPPO.webp" alt="Логотип" loading="lazy"></div>
+      <div class="footer-links">
+        <h4>Швидкі посилання</h4>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="products.html">Продукти</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </div>
+      <div class="footer-payment">
+        <h3>Ми приймаємо</h3>
+        <div class="payment-icons">
+          <img src="image/Visa.webp" alt="Visa" loading="lazy">
+          <img src="image/Mastercard.webp" alt="MasterCard" loading="lazy">
+          <img src="image/Bitcoin.webp" alt="Bitcoin" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="footer-social">
+      <p>©2025 CRAPPO. Всі права захищено</p>
+      <div class="social-icons">
+        <a href="#"><img src="image/facebook.webp" alt="Facebook" loading="lazy"></a>
+        <a href="#"><img src="image/instagram.webp" alt="Instagram" loading="lazy"></a>
+        <a href="#"><img src="image/youtube.webp" alt="YouTube" loading="lazy"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Кнопка "Вгору" -->
+<button id="scrollTopBtn" aria-label="Прокрутити вгору">↑</button>
+
+<!-- Модальне вікно -->
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-content">
+    <button id="closeModal" class="close-modal" aria-label="Закрити модальне вікно">&times;</button>
+    <h2 id="modal-title">Зворотній зв’язок</h2>
+    <form id="registerForm" novalidate>
+      <input type="text" placeholder="Ваше ім’я" required>
+      <input type="email" placeholder="Ваш email" required>
+      <textarea placeholder="Ваше повідомлення"></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
