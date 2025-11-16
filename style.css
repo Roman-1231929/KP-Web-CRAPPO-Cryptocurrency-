@@ -1,0 +1,843 @@
+/* === Базові стилі === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(135deg, #0D0D2B, #0D0D2B);
+  color: #fff;
+}
+
+/* Доступність / утиліти */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.hidden { display: none !important; }
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #3671E9;
+  outline-offset: 2px;
+}
+
+/* === Навігація === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 90px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+  margin-right: 10px;
+}
+
+.menu li a,
+.auth a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.menu li a:hover { color: #9eb6ff; }
+
+.auth a { margin-left: 20px; }
+
+.register-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid #3671E9;
+  border-radius: 25px;
+  background: #3671E9;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: transparent;
+  color: #3671E9;
+}
+
+/* === Hero === */
+.hero {
+  background-color: #0D0D2B;
+  padding: 80px 60px;
+  color: #fff;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  max-width: 550px;
+}
+
+.discount {
+  display: inline-flex;
+  align-items: center;
+  background-color: #1B1B3A;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.discount .save {
+  background: #fff;
+  color: #0D0D2B;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-radius: 20px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.try-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: #3671E9;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  gap: 12px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.try-btn:hover {
+  background: #fff;
+  color: #3671E9;
+}
+
+.arrow-circle {
+  background: #fff;
+  color: #3671E9;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.hero-img {
+  flex: 1 1 500px;
+  text-align: center;
+}
+
+.hero-img img {
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+}
+
+.why-choose {
+  background-color: #0D0D2B;
+  color: #fff;
+  padding: 80px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.why-img {
+  flex: 1 1 500px;
+  text-align: center;
+}
+
+.why-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.why-text {
+  flex: 1 1 500px;
+  max-width: 500px;
+}
+
+.why-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.why-text p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.learn-btn {
+  background: #3671E9;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.learn-btn:hover {
+  background: #fff;
+  color: #3671E9;
+}
+
+
+/* === Контейнер === */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+/* === Statistics === */
+.statistics {
+  background-color: #0D0D2B;
+  color: #fff;
+}
+
+.statistics .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.stat-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.stat-box img {
+  width: 70px;
+  height: 70px;
+}
+
+.stat-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-text h3 {
+  font-size: 26px;
+  margin: 0;
+}
+
+.stat-text p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* === Calculator === */
+.calculator {
+  text-align: center;
+  padding: 60px 20px;
+  background: #0d0d2b;
+  color: white;
+}
+
+.calculator h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.calculator p {
+  margin: 5px 0;
+  color: #aaa;
+}
+
+/* Білий блок */
+.calc-block {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 30px auto;
+  max-width: 700px;
+  min-height: 250px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  color: #0D0D2B;
+}
+
+/* Верхній рядок */
+.calc-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.calc-row input,
+.calc-row select {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 8px 10px;
+  font-size: 16px;
+  flex: 1;
+  outline: none;
+  color: #0D0D2B;
+  background: transparent;
+}
+
+.calc-row select {
+  flex: 0 0 150px;
+}
+
+.calc-row input:focus,
+.calc-row select:focus {
+  border-bottom-color: #3671e9;
+}
+
+/* Кнопка */
+.calc-btn {
+  background: #3671e9;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.calc-btn:hover {
+  background: #2656c7;
+}
+
+/* Результат */
+.calc-result {
+  margin-top: 30px;
+}
+
+.calc-result .small-text {
+  color: #3671E9;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.calc-result h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+}
+
+.calc-result h3 span {
+  color: #3671e9;
+}
+
+.calc-result .note {
+  font-size: 14px;
+  color: #444;
+}
+
+/* === Trade Securely === */
+.trade-securely {
+  background-color: #0D0D2B;
+  color: #fff;
+}
+
+.trade-securely h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+/* === Cryptocurrency Blocks === */
+.crypto-blocks {
+  background-color: #fff;
+  color: #1B1B3A;
+}
+
+.crypto-blocks .container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.crypto-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.bitcoin-card {
+  background: #2B076E;
+  color: #fff;
+}
+
+.crypto-logo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #3671E9;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.btn:hover { background: #2656c7; }
+
+.btn-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  color: #3671E9;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* === Invest Smart === */
+.invest-smart {
+  background-color: #2B076E;
+  color: #fff;
+}
+
+.invest-smart .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.market-center {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.invest-left {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.invest-left h2,
+.invest-left p {
+  color: #fff;
+}
+
+.invest-right {
+  flex: 1 1 400px;
+}
+
+.invest-right img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+/* === Detailed Statistics === */
+.detailed-statistics {
+  background-color: #2B076E;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.detailed-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.details-left {
+  flex: 1 1 400px;
+}
+
+.details-left img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.details-right {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.details-right h2,
+.details-right p {
+  color: #fff;
+}
+
+.details-right h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.details-right p {
+  font-size: 16px;
+}
+
+/* === Grow Your Profit === */
+.grow-profit {
+  background-color: #2B076E;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.grow-profit .detailed-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.grow-left {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.grow-left h2,
+.grow-left p {
+  color: #fff;
+}
+
+.grow-left h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.grow-left p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.grow-right { flex: 1 1 400px; }
+
+.grow-right img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+/* === Footer Top === */
+.footer-top {
+  background: #3861fb;
+  padding: 40px 20px;
+  border-radius: 12px 12px 0 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-text h3 { color: #fff; margin-bottom: 10px; }
+.footer-text p { color: #e0e0e0; }
+
+.footer-subscribe { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.footer-subscribe input {
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  color: white;
+}
+
+.footer-subscribe button {
+  background: white;
+  color: #3861fb;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* === Footer Bottom === */
+.footer-bottom {
+  background: #0b0f2f;
+  padding: 100px 20px;
+}
+
+.footer-links h4,
+.footer-payment h4 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.footer-links ul { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: 8px; }
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover { color: #fff; }
+
+.payment-icons img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.footer-social {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #777;
+  font-size: 14px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* === Кнопка "Вгору" === */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #3671E9;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px; height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  -webkit-transition: background 0.3s, transform 0.2s;
+  -moz-transition: background 0.3s, transform 0.2s;
+  -o-transition: background 0.3s, transform 0.2s;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#scrollTopBtn:hover {
+  background: #2656c7;
+  transform: translateY(-2px);
+}
+
+/* --- Стилі модального вікна --- */
+.modal {
+  display: flex; /* керується .hidden */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: #fff;
+  color: #0D0D2B;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #0D0D2B;
+}
+
+.modal-content h2 { margin: 0 0 15px; }
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  color: #0D0D2B;
+  background: #fff;
+}
+
+.modal-content textarea { min-height: 120px; resize: vertical; }
+
+.modal-content button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #2a9df4;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #1f7acb;
+}
+
+/* Переповнення контентом */
+p, li { overflow-wrap: break-word; word-wrap: break-word; }
+
+/* === Адаптивність === */
+@media (max-width: 992px) {
+  .navbar { padding: 20px 40px; }
+  .hero { padding: 60px 30px; }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .auth { margin-top: 10px; }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-text { max-width: 100%; }
+  .hero-img img { width: 90%; }
+
+  .statistics .container,
+  .invest-smart .container,
+  .detailed-statistics .detailed-container,
+  .grow-profit .detailed-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .invest-left,
+  .details-right,
+  .grow-left { text-align: center; }
+
+  .crypto-card { width: 90%; max-width: 360px; }
+  .footer-bottom { padding: 60px 20px; }
+  #scrollTopBtn { bottom: 20px; right: 20px; }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 { font-size: 32px; }
+  .hero-text p { font-size: 16px; }
+  .try-btn { font-size: 16px; padding: 10px 16px; }
+  .discount { font-size: 14px; }
+}
+
